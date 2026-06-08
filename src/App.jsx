@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import MobileApp from './pages/MobileApp';
+import ContactUs from './pages/ContactUs';
+import Menu from './pages/Menu';
 
-const App = () => {
+function App() {
   return (
-    <div >
-      <h1 className='text-9xl font-black text-center italic uppercase h-screen content-center text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-600'>Saffrona</h1>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/mobileapp" element={<MobileApp />} />
+        <Route path="/mobileapp" element={<ContactUs/>} />
+        <Route path="/mobileapp" element={<Menu/>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

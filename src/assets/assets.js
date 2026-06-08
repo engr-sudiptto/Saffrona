@@ -34,6 +34,7 @@ import sandwich2 from './sandwich2.jpg'
 import sandwich3 from './sandwich3.jpg'
 import sandwich4 from './sandwich4.jpg'
 import sandwich5 from './sandwich5.jpg'
+import saffronaLogo from './saffrona_logo.png'
 import vag_salad from './vag_salad.jpg'
 import white_pasta from './white_pasta.jpg'
 
@@ -76,6 +77,7 @@ export const assets = {
     sandwich3,
     sandwich4,
     sandwich5,
+    saffronaLogo,
     vag_salad,
     white_pasta
 }
