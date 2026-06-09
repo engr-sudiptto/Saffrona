@@ -11,8 +11,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/mobileapp" element={<MobileApp />} />
-        <Route path="/mobileapp" element={<ContactUs/>} />
-        <Route path="/mobileapp" element={<Menu/>} />
+        <Route path="/contactus" element={<ContactUs/>} />
+        <Route path="/menu" element={<Menu/>} />
+        <Route path="/cart" element={<Menu/>} />
+        <Route path="/auth" element={<Menu/>} />
       </Routes>
     </Router>
   );
