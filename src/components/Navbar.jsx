@@ -12,7 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <div>
+    <div className='overflow-x-clip'>
       <div className="flex justify-between relative w-full max-w-300 m-auto items-center px-3 py-2 lg:px-5 lg:py-4">
         {/* ------- main menu -------  */}
         <Link to="/" className="w-22 h-10 sm:w-28 sm:h-12 xl:w-30 xl:h-14">

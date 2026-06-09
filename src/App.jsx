@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import MobileApp from './pages/MobileApp';
 import ContactUs from './pages/ContactUs';
 import Menu from './pages/Menu';
+import PlaceOrder from './pages/PlaceOrder';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/menu" element={<Menu/>} />
         <Route path="/cart" element={<Menu/>} />
         <Route path="/auth" element={<Menu/>} />
+        <Route path="/order" element={<PlaceOrder/>} />
       </Routes>
     </Router>
   );
