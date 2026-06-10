@@ -38,9 +38,13 @@ import saffronaLogo from './saffrona_logo.png';
 import vag_salad from './vag_salad.jpg';
 import white_pasta from './white_pasta.jpg';
 import star from './star.png';
+import appStore from './appStore.png'
+import playStore from './playStore.png'
 
 // Exporting all images as an object
 export const assets = {
+  appStore,
+  playStore,
   cake,
   cake2,
   cake3,
