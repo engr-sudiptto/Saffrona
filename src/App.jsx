@@ -5,9 +5,11 @@ import MobileApp from './pages/MobileApp';
 import ContactUs from './pages/ContactUs';
 import Menu from './pages/Menu';
 import PlaceOrder from './pages/PlaceOrder';
+import Footer from './components/Footer';
 
 function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -19,6 +21,8 @@ function App() {
         <Route path="/order" element={<PlaceOrder/>} />
       </Routes>
     </Router>
+    <Footer/>
+    </>
   );
 }
 

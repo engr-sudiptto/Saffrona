@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { assets } from '../assets/assets';
+import { StoreContext } from '../context/StoreContext';
 
 const FoodItem = ({ id, name, price, description, image, rating }) => {
-  const [itemCount, setItemCount] = useState(0)
+  const { cartItems, addToCart, removeFromCart } = useContext(StoreContext)
+
   return (
     <div>
       <div className="rounded-xl overflow-hidden hover:-translate-y-3 transition-all duration-300 cursor-pointer hover:shadow-xl hover:bg-gray-50">
@@ -13,9 +15,9 @@ const FoodItem = ({ id, name, price, description, image, rating }) => {
             src={image}
             alt="food image"
           />
-          {!itemCount ? (
+          {!cartItems[id] ? (
             <div
-              onClick={() => setItemCount(prev => prev + 1)}
+              onClick={() => addToCart(id)}
               title="Add to Cart"
               className="absolute bottom-2 right-2 w-7 h-7 rounded-full bg-amber-50 text-2xl flex justify-center items-center hover:bg-[#F59E0B] hover:text-white"
             >
@@ -23,11 +25,11 @@ const FoodItem = ({ id, name, price, description, image, rating }) => {
             </div>
           ) : (
             <div className="absolute bottom-2 right-2 bg-amber-50 w-6 flex flex-col justify-center items-center rounded-full py-1 gap-1">
-              <div onClick={()=>setItemCount(prev=>prev-1)} className="w-5 h-5 m-auto flex justify-center items-center bg-red-400/50 rounded-full text-2xl pb-1.5">
+              <div onClick={()=>removeFromCart(id)} className="w-5 h-5 m-auto flex justify-center items-center bg-red-400/50 rounded-full text-2xl pb-1.5">
                 -
               </div>
-              <p>{itemCount}</p>
-              <div onClick={()=>setItemCount(prev=>prev+1)} className="w-5 h-5 m-auto flex justify-center items-center bg-green-400/50 rounded-full text-xl">
+              <p>{cartItems[id]}</p>
+              <div onClick={()=>addToCart(id)} className="w-5 h-5 m-auto flex justify-center items-center bg-green-400/50 rounded-full text-xl">
                 +
               </div>
             </div>
