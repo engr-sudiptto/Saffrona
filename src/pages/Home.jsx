@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import ExploreMenu from '../components/ExploreMenu'
 import FoodDisplay from '../components/FoodDisplay'
@@ -10,7 +9,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <Header />
       <ExploreMenu category={category} setCategory={setCategory} />
       <FoodDisplay category={category} />

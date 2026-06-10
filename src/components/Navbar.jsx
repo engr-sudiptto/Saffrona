@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { assets } from '../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
   // mobile menu functionality
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,13 +21,11 @@ const Navbar = () => {
     // cleanup function
     return () => {
       document.body.style.overflow = 'auto';
-    }
-
-  },[isMenuOpen])
-
+    };
+  }, [isMenuOpen]);
 
   return (
-    <div className='overflow-x-clip'>
+    <div className="overflow-x-clip">
       <div className="flex justify-between fixed bg-white top-0 left-0 right-0 z-101 w-full max-w-300 m-auto items-center px-3 py-2 lg:px-5 lg:py-4">
         {/* ------- main menu -------  */}
         <Link to="/" className="w-22 h-10 sm:w-28 sm:h-12 xl:w-30 xl:h-14">
@@ -101,7 +99,7 @@ const Navbar = () => {
           </ul>
         </nav>
 
-        {/* ------- social media icons --------- */}
+        {/* ------- search & cart icon --------- */}
         <div className="flex gap-3 items-center sm:gap-5">
           <Link to="/search">
             <svg
@@ -136,13 +134,13 @@ const Navbar = () => {
               />
             </svg>
           </Link>
-          <Link
+          <button
+            onClick={()=>setShowLogin(true)}
             title="sign up"
-            to="/auth"
             className="w-20 h-7 border rounded-lg border-[#F59E0B] text-[#F59E0B] text-center sm:w-24 hover:bg-[#F59E0B] hover:text-white"
           >
             sign up
-          </Link>
+          </button>
         </div>
 
         {/* ------------ mobile menu button --------- */}
