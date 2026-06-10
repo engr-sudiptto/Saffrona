@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { assets } from '../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -10,10 +10,25 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // stop scrolling when nav bar is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // cleanup function
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+
+  },[isMenuOpen])
+
 
   return (
     <div className='overflow-x-clip'>
-      <div className="flex justify-between relative w-full max-w-300 m-auto items-center px-3 py-2 lg:px-5 lg:py-4">
+      <div className="flex justify-between fixed bg-white top-0 left-0 right-0 z-101 w-full max-w-300 m-auto items-center px-3 py-2 lg:px-5 lg:py-4">
         {/* ------- main menu -------  */}
         <Link to="/" className="w-22 h-10 sm:w-28 sm:h-12 xl:w-30 xl:h-14">
           <img
@@ -27,10 +42,10 @@ const Navbar = () => {
         <nav>
           <div
             onClick={toggleMenu}
-            className={`${isMenuOpen ? 'visible opacity-100' : 'hidden opacity-0'} w-full h-screen absolute bg-black/30 top-0 left-0 z-99 backdrop-blur-sm transition-all duration-700 lg:hidden`}
+            className={`${isMenuOpen ? 'visible opacity-100' : 'hidden opacity-0'} w-full h-screen fixed bg-black/30 top-0 left-0 z-99 backdrop-blur-sm transition-all duration-700 lg:hidden`}
           ></div>
           <ul
-            className={`w-65 h-screen absolute top-0 ${isMenuOpen ? 'right-0' : '-right-65'} bg-linear-to-r from-[#F59E0B] to-[#FCD34D] flex flex-col gap-10 pt-10 pl-10 transition-all duration-700 z-100 lg:static lg:flex-row lg:gap-10 lg:p-0 lg:bg-none lg:w-auto lg:h-auto`}
+            className={`w-65 h-screen fixed top-0 ${isMenuOpen ? 'right-0' : '-right-65'} bg-linear-to-r from-[#F59E0B] to-[#FCD34D] flex flex-col gap-10 pt-10 pl-10 transition-all duration-700 z-100 lg:static lg:flex-row lg:gap-10 lg:p-0 lg:bg-none lg:w-auto lg:h-auto`}
           >
             <button
               onClick={toggleMenu}

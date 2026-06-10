@@ -75,7 +75,7 @@ const Header = () => {
     <div>
       <div
         ref={containerRef}
-        className="w-full max-w-300 m-auto h-55 sm:h-65 md:h-80 lg:h-105 xl:h-125 relative mt-5 xl:mt-7"
+        className="w-full max-w-300 m-auto h-55 sm:h-65 md:h-80 lg:h-105 xl:h-125 relative mt-15 sm:mt-20 md:mt-23"
       >
         <img
           className="w-[95%] h-full m-auto object-cover absolute inset-0 rounded-lg xl:rounded-3xl"
