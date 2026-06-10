@@ -8,6 +8,7 @@ import PlaceOrder from './pages/PlaceOrder';
 import Footer from './components/Footer';
 import Auth from './components/Auth';
 import Navbar from './components/Navbar';
+import Cart from './pages/Cart';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -26,7 +27,7 @@ function App() {
           <Route path="/mobileapp" element={<MobileApp />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/cart" element={<Menu />} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </Router>
