@@ -3,9 +3,9 @@ import { assets } from '../assets/assets';
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-300 m-auto mt-15 bg-[#111111] text-gray-400 pt-16 pb-8 px-4 md:px-12 border-t border-zinc-800">
+    <footer className="w-full max-w-300 m-auto mt-15 bg-[#111111] text-gray-400 pt-16 pb-8 px-4 md:px-12 border-t border-zinc-800 sm:px-10">
       {/* ========= Main Footer Container ========= */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 xl:pl-10">
         {/* ----- Part 1: Logo & Socials ----- */}
         <div className="flex flex-col gap-5">
           <div className="w-40">
@@ -43,7 +43,7 @@ const Footer = () => {
         </div>
 
         {/* ----- Part 2: Quick Links ----- */}
-        <div className="flex flex-col gap-4 md:pl-12">
+        <div className="flex flex-col gap-4 md:pl-12 xl:pl-35">
           <h3 className="text-white text-lg font-medium tracking-wider uppercase border-b border-zinc-800 pb-2 w-max">
             Company
           </h3>
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         {/* ----- Part 3: Get In Touch ----- */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 xl:pl-20">
           <h3 className="text-white text-lg font-medium tracking-wider uppercase border-b border-zinc-800 pb-2 w-max">
             Get In Touch
           </h3>
