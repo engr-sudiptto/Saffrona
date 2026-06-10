@@ -14,7 +14,11 @@ function App() {
 
   return (
     <>
-      {showLogin ? <Auth setShowLogin={setShowLogin} /> : <></>}
+      {showLogin ? (
+        <Auth showLogin={showLogin} setShowLogin={setShowLogin} />
+      ) : (
+        <></>
+      )}
       <Router>
         <Navbar setShowLogin={setShowLogin} />
         <Routes>

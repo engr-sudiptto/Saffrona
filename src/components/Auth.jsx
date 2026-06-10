@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Auth = ({ setShowLogin }) => {
+const Auth = ({ showLogin, setShowLogin }) => {
   const [currentState, setCurrentState] = useState('Sign Up');
   const [showPassword, setShowPassword] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault();
   };
+
+    // stop scrolling when popup is open
+    useEffect(() => {
+      if (showLogin) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+
+      // cleanup function
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }, [showLogin]);
+
   return (
     <div className="fixed inset-0 z-110 bg-black/50 flex justify-center items-center backdrop-blur-xs">
       {/* ======== main auth popup =========  */}
