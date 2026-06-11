@@ -8,9 +8,25 @@ const Cart = () => {
     useContext(StoreContext);
   const isCartEmpty = !foodList.some(item => cartItems[item._id] > 0);
 
+    const navigate = useNavigate();
+
+  const [showPopup, setShowPopup] = useState(false);
+  const title = 'Nothing to Checkout';
+  const bio = 'Your cart is empty! Please add some items to your cart before proceeding to checkout.'
+  const buttonText = 'Continue Shopping';
+
+  const handleCheckout = () => {
+    if (getTotalAmount() === 0) {
+      setShowPopup(true);
+    } else {
+      navigate('/order'); 
+    }
+  };
 
   return (
     <div className="w-full max-w-250 xl:min-h-125 m-auto mt-15 sm:mt-20 md:mt-30">
+      {/* ------------ cross popup -----------  */}
+      <CrossPopup isOpen={showPopup} onClose={() => setShowPopup(false)} title={title} bio={bio} buttonText={buttonText} />;
       {/* ====== main cart section is here =======  */}
       <div>
         {/* ------ cart items title -------  */}
@@ -82,9 +98,7 @@ const Cart = () => {
               <p>Total</p>
               <p>${getTotalAmount() === 0 ? 0 : getTotalAmount() + 2}</p>
             </div>
-            <button
-              className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold cursor-pointer hover:bg-[#f3b014da]"
-            >
+            <button onClick = { handleCheckout } className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold cursor-pointer hover:bg-[#f3b014da]">
               PROCEED TO CHECKOUT
             </button>
           </div>
