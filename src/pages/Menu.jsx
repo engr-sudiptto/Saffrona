@@ -74,6 +74,8 @@ const Menu = () => {
           return null;
         })}
       </div>
+
+      <MenuFoodDetails/>
     </div>
   );
 };
