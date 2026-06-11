@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import MobileApp from './pages/MobileApp';
@@ -13,8 +13,6 @@ import Preloader from './components/Preloader';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
-
-  import Preloader from './components/Preloader';
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
