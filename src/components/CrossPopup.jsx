@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const CrossPopup = ({ isOpen, onClose, title, bio, buttonText }) => {
   const [animate, setAnimate] = useState(false);
 
-  // পপআপ ওপেন হলে এনিমেশন শুরু করার জন্য ইফেক্ট
+  // start animation when popup is open
   useEffect(() => {
     if (isOpen) {
       const timer = setTimeout(() => setAnimate(true), 50);

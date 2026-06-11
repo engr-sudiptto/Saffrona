@@ -14,8 +14,13 @@ const Header = () => {
   const paragraphText =
     'Satisfy your daily cravings with the premium flavors of Saffrona. The finest dishes are now at your fingertips.';
 
+  // sessionStorage থেকে চেক করছি অ্যানিমেশন আগে হয়েছে কি না
+  const hasAnimated = sessionStorage.getItem('heroAnimated') === 'true';
+
   useGSAP(
     () => {
+      if (hasAnimated) return;
+
       // animation for h2 text
       gsap.fromTo(
         '.char-h2',
@@ -32,6 +37,7 @@ const Header = () => {
             each: 0.03,
             from: 'random',
           },
+          delay: 2,
         },
       );
 
@@ -48,7 +54,7 @@ const Header = () => {
           duration: 0.5,
           ease: 'power2.out',
           stagger: 0.08,
-          delay: 0.5,
+          delay: 2.5,
         },
       );
 
@@ -64,7 +70,10 @@ const Header = () => {
           y: 0,
           duration: 0.6,
           ease: 'power3.out',
-          delay: 1.4,
+          delay: 2.4,
+          onComplete: () => {
+            sessionStorage.setItem('heroAnimated', 'true');
+          }
         },
       );
     },
@@ -86,7 +95,7 @@ const Header = () => {
             {headingLine1.split('').map((char, index) => (
               <span
                 key={index}
-                className="char-h2 inline-block opacity-0"
+                className={`char-h2 inline-block ${hasAnimated ? 'opacity-100' : 'opacity-0'}`}
                 style={{ minWidth: char === ' ' ? '0.25em' : 'auto' }}
               >
                 {char}
@@ -97,7 +106,7 @@ const Header = () => {
             {headingLine2.split('').map((char, index) => (
               <span
                 key={index}
-                className="char-h2 inline-block opacity-0"
+                className={`char-h2 inline-block ${hasAnimated ? 'opacity-100' : 'opacity-0'}`}
                 style={{ minWidth: char === ' ' ? '0.25em' : 'auto' }}
               >
                 {char}
@@ -106,12 +115,17 @@ const Header = () => {
           </h2>
           <p className="text-xs md:text-sm lg:text-base text-[#5c4d4d] my-3 w-[75%] sm:w-[50%] ml-auto flex flex-wrap justify-end gap-x-1.5 overflow-hidden">
             {paragraphText.split(' ').map((word, index) => (
-              <span key={index} className="word-p inline-block opacity-0">
+              <span
+                key={index}
+                className={`word-p inline-block ${hasAnimated ? 'opacity-100' : 'opacity-0'}`}
+              >
                 {word}
               </span>
             ))}
           </p>
-          <div className="btn-anim flex justify-end md:mt-6 lg:mt-7">
+          <div
+            className={`btn-anim flex justify-end md:mt-6 lg:mt-7 ${hasAnimated ? 'opacity-100' : 'opacity-0'}`}
+          >
             <button className=" block w-25 h-8 bg-[#F59E0B] text-white rounded-lg text-xs tracking-wider cursor-pointer md:w-30 md:h-8 lg:w-35 lg:h-10 lg:text-sm hover:bg-[#f58a10]">
               View More
             </button>
@@ -120,6 +134,6 @@ const Header = () => {
       </div>
     </div>
   );
-};
+};;
 
 export default Header;

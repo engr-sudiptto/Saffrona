@@ -9,12 +9,14 @@ import Footer from './components/Footer';
 import Auth from './components/Auth';
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
+import Preloader from './components/Preloader';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
 
   return (
     <>
+      <Preloader />;
       {showLogin ? (
         <Auth showLogin={showLogin} setShowLogin={setShowLogin} />
       ) : (
@@ -27,7 +29,7 @@ function App() {
           <Route path="/mobileapp" element={<MobileApp />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/cart" element={<Cart/>} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
         </Routes>
       </Router>
