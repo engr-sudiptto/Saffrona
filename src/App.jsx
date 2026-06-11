@@ -14,9 +14,20 @@ import Preloader from './components/Preloader';
 function App() {
   const [showLogin, setShowLogin] = useState(false);
 
+  import Preloader from './components/Preloader';
+
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Preloader />;
+      <Preloader isLoading={isLoading} />
       {showLogin ? (
         <Auth showLogin={showLogin} setShowLogin={setShowLogin} />
       ) : (

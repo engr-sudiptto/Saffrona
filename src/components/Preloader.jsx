@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const Preloader = () => {
-  return (
-    <div>Preloader</div>
-  )
-}
+const Preloader = ({ isLoading }) => {
+  if (!isLoading) return null;
 
-export default Preloader
+  return <div>Preloader</div>;
+};
+
+export default Preloader;
