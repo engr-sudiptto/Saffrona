@@ -4,6 +4,19 @@ import { StoreContext } from '../context/StoreContext';
 const MenuFoodDetails = ({ food, onClose }) => {
   const { addToCart } = useContext(StoreContext);
 
+  useEffect(() => {
+    if (food) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // cleanup function
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [food]);
+
   if (!food) {
     return (
       <div className="text-center text-gray-500 py-10">
@@ -15,6 +28,25 @@ const MenuFoodDetails = ({ food, onClose }) => {
   return (
     <div className="max-w-4xl mx-auto h-screen md:h-140 mt-14 sm:mt-20 md:mt-30 bg-white shadow-xl overflow-auto overflow-x-hidden border border-gray-100 my-8 transition-all duration-300 hover:shadow-2xl p-3 fixed inset-0 z-100 pb-15 md:p-2">
       <div className="flex flex-col md:flex-row relative w-full h-full">
+        {/* ------- cross button ---------  */}
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 z-50 cursor-pointer w-6 h-6 bg-white/50 rounded-full flex justify-center items-center md:top-3 md:left-3"
+        >
+          <svg
+            className={`w-4 h-4 text-gray-700 transition-all duration-700 ease-out`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth="2.5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         {/* ---------- food image --------- */}
         <div className="relative w-full md:w-1/2 h-64 md:h-auto min-h-75 bg-gray-100">
           <img src={food.image} className="w-full h-full object-cover" />
@@ -129,6 +161,7 @@ const MenuFoodDetails = ({ food, onClose }) => {
               </p>
             </div>
             <button
+              onClick={() => addToCart(food._id)}
               className="flex-1 max-w-50 max-h-10 bg-[#F59E0B] hover:bg-[#f59f0bba] text-white font-bold py-3 px-6 rounded-lg text-sm shadow-md hover:shadow-orange-200 cursor-pointer"
             >
               Add to cart
