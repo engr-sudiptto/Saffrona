@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { assets } from '../assets/assets';
 import { Link, NavLink } from 'react-router-dom';
+import { StoreContext } from '../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
   // mobile menu functionality
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getTotalAmount } = useContext(StoreContext);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -118,7 +120,11 @@ const Navbar = ({ setShowLogin }) => {
             </svg>
           </Link>
           <Link to="/cart" title="cart" className="relative">
-            <div className="absolute -top-0.75 -right-1 w-2 h-2 rounded-full bg-pink-700/50"></div>
+            {getTotalAmount() === 0 ? (
+              <div className="absolute -top-0.75 -right-1 w-2 h-2 rounded-full bg-pink-700/50"></div>
+            ) : (
+              ''
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -135,7 +141,7 @@ const Navbar = ({ setShowLogin }) => {
             </svg>
           </Link>
           <button
-            onClick={()=>setShowLogin(true)}
+            onClick={() => setShowLogin(true)}
             title="sign up"
             className="w-20 h-7 border rounded-lg border-[#F59E0B] text-[#F59E0B] text-center sm:w-24 hover:bg-[#F59E0B] hover:text-white"
           >

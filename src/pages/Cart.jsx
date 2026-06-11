@@ -1,8 +1,11 @@
 import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-  const { foodList, cartItems, removeFromCart } = useContext(StoreContext)
+  const { foodList, cartItems, removeFromCart, getTotalAmount } =
+    useContext(StoreContext);
+  const navigate = useNavigate()
 
   return (
     <div className="w-full max-w-250 m-auto mt-15 sm:mt-20 md:mt-30">
@@ -56,19 +59,19 @@ const Cart = () => {
             <h3 className="text-2xl text-gray-700 mb-3">Cart Totals</h3>
             <div className="flex justify-between items-center text-sm text-gray-500">
               <p>Subtotal</p>
-              <span>0</span>
+              <p>${getTotalAmount()}</p>
             </div>
             <div className="w-full h-px bg-gray-300 my-2"></div>
             <div className="flex justify-between items-center text-sm text-gray-500">
               <p>Delivery Fee</p>
-              <span>2</span>
+              <span>$2</span>
             </div>
             <div className="w-full h-px bg-gray-300 my-2"></div>
             <div className="flex justify-between items-center font-bold text-gray-600">
               <p>Total</p>
-              <span>0</span>
+              <p>${getTotalAmount() + 2}</p>
             </div>
-            <button className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold">
+            <button onClick={()=>navigate('/order')} className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold cursor-pointer hover:bg-[#f3b014da]">
               PROCEED TO CHECKOUT
             </button>
           </div>
@@ -79,10 +82,12 @@ const Cart = () => {
             </p>
             <div className="flex items-center justify-between mt-5">
               <input
-                className="basis-[70%] w-full h-11 border border-gray-300 rounded-l-lg border-r-0"
+                className="basis-[70%] w-full h-11 border border-gray-300 rounded-l-lg border-r-0 px-3 outline-0 text-gray-500"
                 type="text"
               />
-              <button className="basis-[30%] w-full h-11 bg-[#F59E0B] text-center content-center tracking-wide rounded-r-lg text-white">Submit</button>
+              <button className="basis-[30%] w-full h-11 bg-[#F59E0B] hover:bg-[#f3b014da] text-center content-center tracking-wide rounded-r-lg text-white cursor-pointer">
+                Submit
+              </button>
             </div>
           </div>
         </div>
