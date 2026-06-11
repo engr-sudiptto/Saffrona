@@ -1,14 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react';
 import { StoreContext } from '../context/StoreContext'
 import { useNavigate } from 'react-router-dom';
+import CrossPopup from '../components/CrossPopup';
 
 const Cart = () => {
   const { foodList, cartItems, removeFromCart, getTotalAmount } =
     useContext(StoreContext);
-  const navigate = useNavigate()
+  const isCartEmpty = !foodList.some(item => cartItems[item._id] > 0);
+
 
   return (
-    <div className="w-full max-w-250 m-auto mt-15 sm:mt-20 md:mt-30">
+    <div className="w-full max-w-250 xl:min-h-125 m-auto mt-15 sm:mt-20 md:mt-30">
       {/* ====== main cart section is here =======  */}
       <div>
         {/* ------ cart items title -------  */}
@@ -23,34 +25,43 @@ const Cart = () => {
         <div className="w-full h-px bg-gray-300 "></div>
 
         {/* -------- food itmes -------  */}
-        {foodList.map((item, index) => {
-          if (cartItems[item._id] > 0) {
-            return (
-              <div>
-                <div className="grid grid-cols-6 items-center p-3 text-xs sm:text-sm">
-                  <img
-                    className="w-10 h-10 lg:w-15 lg:h-15"
-                    src={item.image}
-                    alt=""
-                  />
-                  <p className="text-gray-400">{item.name}</p>
-                  <p className="text-gray-400">${item.price}</p>
-                  <p className="text-gray-400">{cartItems[item._id]}</p>
-                  <p className="text-gray-400">
-                    ${item.price * cartItems[item._id]}
-                  </p>
-                  <p
-                    onClick={() => removeFromCart(item._id)}
-                    className="text-gray-400 cursor-pointer text-[10px] text-center"
-                  >
-                    <i class="fa-solid fa-x"></i>
-                  </p>
+        {isCartEmpty ? (
+          <div>
+            <p className="text-lg text-center text-gray-400 mt-5">
+              No item available in the cart right now
+            </p>
+          </div>
+        ) : (
+          foodList.map((item, index) => {
+            if (cartItems[item._id] > 0) {
+              return (
+                <div>
+                  <div className="grid grid-cols-6 items-center p-3 text-xs sm:text-sm">
+                    <img
+                      className="w-10 h-10 lg:w-15 lg:h-15"
+                      src={item.image}
+                      alt=""
+                    />
+                    <p className="text-gray-400">{item.name}</p>
+                    <p className="text-gray-400">${item.price}</p>
+                    <p className="text-gray-400">{cartItems[item._id]}</p>
+                    <p className="text-gray-400">
+                      ${item.price * cartItems[item._id]}
+                    </p>
+                    <p
+                      onClick={() => removeFromCart(item._id)}
+                      className="text-gray-400 cursor-pointer text-[10px] text-center"
+                    >
+                      <i class="fa-solid fa-x"></i>
+                    </p>
+                  </div>
+                  <div className="w-full h-px bg-gray-300"></div>
                 </div>
-                <div className="w-full h-px bg-gray-300"></div>
-              </div>
-            );
-          }
-        })}
+              );
+            }
+            return null;
+          })
+        )}
 
         {/* ---------- cart total & promo code section ------------  */}
         <div className="grid grid-cols-1 gap-0 mt-10 lg:grid-cols-2 lg:gap-20">
@@ -64,14 +75,16 @@ const Cart = () => {
             <div className="w-full h-px bg-gray-300 my-2"></div>
             <div className="flex justify-between items-center text-sm text-gray-500">
               <p>Delivery Fee</p>
-              <span>$2</span>
+              <span>${getTotalAmount() === 0 ? 0 : 2}</span>
             </div>
             <div className="w-full h-px bg-gray-300 my-2"></div>
             <div className="flex justify-between items-center font-bold text-gray-600">
               <p>Total</p>
-              <p>${getTotalAmount() + 2}</p>
+              <p>${getTotalAmount() === 0 ? 0 : getTotalAmount() + 2}</p>
             </div>
-            <button onClick={()=>navigate('/order')} className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold cursor-pointer hover:bg-[#f3b014da]">
+            <button
+              className="w-full h-10 bg-[#F59E0B] mt-10 rounded-lg text-sm tracking-wider text-white font-semibold cursor-pointer hover:bg-[#f3b014da]"
+            >
               PROCEED TO CHECKOUT
             </button>
           </div>
@@ -94,6 +107,6 @@ const Cart = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Cart

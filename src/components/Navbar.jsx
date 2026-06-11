@@ -120,7 +120,7 @@ const Navbar = ({ setShowLogin }) => {
             </svg>
           </Link>
           <Link to="/cart" title="cart" className="relative">
-            {getTotalAmount() === 0 ? (
+            {getTotalAmount() !== 0 ? (
               <div className="absolute -top-0.75 -right-1 w-2 h-2 rounded-full bg-pink-700/50"></div>
             ) : (
               ''
