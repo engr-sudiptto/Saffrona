@@ -5,6 +5,8 @@ import MenuFoodDetails from '../components/MenuFoodDetails';
 const Menu = () => {
   const [category, setCategory] = useState('All');
 
+  const [selectedFood, setSelectedFood] = useState(null);
+
   return (
     <div className="w-full max-w-250 m-auto mt-15 sm:mt-20 md:mt-30">
       {/* ====== explore menu header =========  */}
@@ -74,8 +76,14 @@ const Menu = () => {
           return null;
         })}
       </div>
+      {selectedFood && (
+        <div className="fixed inset-0 w-full h-screen bg-black/30 backdrop-blur-lg"></div>
+      )}
 
-      <MenuFoodDetails/>
+      <MenuFoodDetails
+        food={selectedFood}
+        onClose={() => setSelectedFood(null)}
+      />
     </div>
   );
 };
