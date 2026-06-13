@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 const ContactUs = () => {
   const [activeTab, setActiveTab] = useState('contact');
 
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="w-full max-w-250 m-auto mt-15 sm:mt-20 md:mt-30">
       {/* -------- contact section title --------  */}
@@ -48,7 +52,7 @@ const ContactUs = () => {
 
       {/* --------- contact us form ---------  */}
       <div>
-        <form className="p-3">
+        <form onSubmit={handleSubmit} className="p-3">
           <div className="flex flex-col w-full max-w-200 m-auto">
             <label className="text-sm text-gray-600">Full name</label>
             <input
@@ -68,7 +72,6 @@ const ContactUs = () => {
               className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
               type="text"
             />
-
             {/* ------- conditional randering ---------  */}
             {activeTab === 'reserve' && (
               <div>
@@ -120,7 +123,7 @@ const ContactUs = () => {
                 </div>
               </div>
             )}
-
+            {/* ------ dynamic label for textarea (changes based on form type) -----  */}
             <label className="text-sm text-gray-600">
               {activeTab === 'contact'
                 ? 'Your Message'
@@ -134,6 +137,14 @@ const ContactUs = () => {
               }
               className="mt-2 pt-3 w-full h-50 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px] resize-none"
             ></textarea>
+
+            {/* ------------- dynamic form submit button ------------  */}
+            <button
+              type="submit"
+              className="mt-5 px-8 py-3 rounded-xl border border-[#F59E0B] text-[#F59E0B] bg-white hover:bg-[#F59E0B] hover:text-white font-medium  shadow-sm hover:shadow-md text-sm sm:text-base cursor-pointer"
+            >
+              {activeTab === 'contact' ? 'Send Message' : 'Reserve My Table'}
+            </button>
           </div>
         </form>
       </div>
