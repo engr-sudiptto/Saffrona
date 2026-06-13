@@ -45,6 +45,22 @@ const ContactUs = () => {
           </button>
         </div>
       </div>
+
+      {/* --------- contact us form ---------  */}
+      <div>
+        <form>
+          <div className='flex flex-col w-full max-w-200 m-auto'>
+            <label className="text-sm text-gray-600">Full name</label>
+            <input placeholder='Your name' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
+            <label className="text-sm text-gray-600">Email</label>
+            <input placeholder='name@example.com' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
+            <label className="text-sm text-gray-600">Phone number</label>
+            <input placeholder='(555) 123-4567' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
+            <label className="text-sm text-gray-600">Your message</label>
+            <textarea placeholder='Write your questions or suggestions here...' className='mt-2 pt-3 w-full h-50 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px] resize-none'></textarea>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
