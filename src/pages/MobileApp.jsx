@@ -20,8 +20,8 @@ const MobileApp = () => {
             iOS and Android.
           </p>
           <div className="grid grid-cols-2 gap-5 mt-5 w-full sm:w-100 m-auto">
-            <img className="w-full cursor-pointer" src={assets.playStore} />
-            <img className="w-full cursor-pointer" src={assets.appStore} />
+            <img className="w-full cursor-pointer hover:-translate-y-2 duration-200" src={assets.playStore} />
+            <img className="w-full cursor-pointer hover:-translate-y-2 duration-200" src={assets.appStore} />
           </div>
         </div>
         {/* ------- right part -----  */}
