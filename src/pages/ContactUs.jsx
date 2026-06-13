@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const ContactUs = () => {
   const [activeTab, setActiveTab] = useState('contact');
@@ -48,21 +48,97 @@ const ContactUs = () => {
 
       {/* --------- contact us form ---------  */}
       <div>
-        <form>
-          <div className='flex flex-col w-full max-w-200 m-auto'>
+        <form className="p-3">
+          <div className="flex flex-col w-full max-w-200 m-auto">
             <label className="text-sm text-gray-600">Full name</label>
-            <input placeholder='Your name' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
+            <input
+              placeholder="Your name"
+              className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+              type="text"
+            />
             <label className="text-sm text-gray-600">Email</label>
-            <input placeholder='name@example.com' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
+            <input
+              placeholder="name@example.com"
+              className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+              type="text"
+            />
             <label className="text-sm text-gray-600">Phone number</label>
-            <input placeholder='(555) 123-4567' className='mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]' type="text" />
-            <label className="text-sm text-gray-600">Your message</label>
-            <textarea placeholder='Write your questions or suggestions here...' className='mt-2 pt-3 w-full h-50 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px] resize-none'></textarea>
+            <input
+              placeholder="(555) 123-4567"
+              className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+              type="text"
+            />
+
+            {/* ------- conditional randering ---------  */}
+            {activeTab === 'reserve' && (
+              <div>
+                <div className="grid grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-sm text-gray-600">Date</label>
+                    <input
+                      placeholder="(555) 123-4567"
+                      className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+                      type="date"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-sm text-gray-600">Date</label>
+                    <select className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]">
+                      <option>Select time</option>
+                      <option>12:00 PM</option>
+                      <option>1:00 PM</option>
+                      <option>6:00 PM</option>
+                      <option>7:00 PM</option>
+                      <option>8:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-sm text-gray-600">
+                      Number of Guests
+                    </label>
+                    <select className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]">
+                      <option>1 Person</option>
+                      <option selected>2 People</option>
+                      <option>4 People</option>
+                      <option>6 People</option>
+                      <option>10+ People</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="text-sm text-gray-600">
+                      Special Occasion (Optional)
+                    </label>
+                    <select className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]">
+                      <option selected>None</option>
+                      <option>Birthday</option>
+                      <option>Anniversary</option>
+                      <option>Business Meeting</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <label className="text-sm text-gray-600">
+              {activeTab === 'contact'
+                ? 'Your Message'
+                : 'Special Requests (Optional)'}
+            </label>
+            <textarea
+              placeholder={
+                activeTab === 'contact'
+                  ? 'Write your questions or suggestions here...'
+                  : 'Your message here...'
+              }
+              className="mt-2 pt-3 w-full h-50 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px] resize-none"
+            ></textarea>
           </div>
         </form>
       </div>
     </div>
   );
-}
+};
 
-export default ContactUs
+export default ContactUs;
