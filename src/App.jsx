@@ -10,6 +10,9 @@ import Auth from './components/Auth';
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
 import Preloader from './components/Preloader';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Delivery from './pages/Delivery';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -36,13 +39,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mobileapp" element={<MobileApp />} />
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/delivery" element={<Delivery/>} />
+          <Route path="/about" element={<AboutUs/>} />
         </Routes>
-      </Router>
       <Footer />
+      </Router>
     </>
   );
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import { assets } from '../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="w-full max-w-300 m-auto mt-15 bg-[#111111] text-gray-400 pt-16 pb-8 px-4 md:px-12 border-t border-zinc-800 sm:px-10">
       {/* ========= Main Footer Container ========= */}
@@ -48,16 +51,28 @@ const Footer = () => {
             Company
           </h3>
           <ul className="flex flex-col gap-2.5 text-sm">
-            <li className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200">
+            <li
+              onClick={() => navigate('/')}
+              className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200"
+            >
               Home
             </li>
-            <li className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200">
+            <li
+              onClick={() => navigate('/about')}
+              className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200"
+            >
               About us
             </li>
-            <li className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200">
+            <li
+              onClick={() => navigate('/delivery')}
+              className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200"
+            >
               Delivery
             </li>
-            <li className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200">
+            <li
+              onClick={() => navigate('/privacy-policy')}
+              className="hover:text-[#D4AF37] cursor-pointer transition-colors duration-200"
+            >
               Privacy policy
             </li>
           </ul>
