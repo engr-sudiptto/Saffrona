@@ -40,6 +40,7 @@ import white_pasta from './white_pasta.jpg';
 import star from './star.png';
 import appStore from './appStore.png'
 import playStore from './playStore.png'
+import profileIcon from './profile_icon.png'
 
 // Exporting all images as an object
 export const assets = {
@@ -84,6 +85,7 @@ export const assets = {
   vag_salad,
   white_pasta,
   star,
+  profileIcon
 };
 
 export const menuList = [

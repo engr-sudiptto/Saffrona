@@ -6,7 +6,9 @@ import { StoreContext } from '../context/StoreContext';
 const Navbar = ({ setShowLogin }) => {
   // mobile menu functionality
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { getTotalAmount } = useContext(StoreContext);
+  const { getTotalAmount, token, setToken } = useContext(StoreContext);
+
+  const [profileHandler, setProfileHandler] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -102,7 +104,7 @@ const Navbar = ({ setShowLogin }) => {
         </nav>
 
         {/* ------- search & cart icon --------- */}
-        <div className="flex gap-3 items-center sm:gap-5">
+        <div className="flex gap-3 items-center sm:gap-5 xl:pr-3">
           <Link to="/search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,13 +142,62 @@ const Navbar = ({ setShowLogin }) => {
               />
             </svg>
           </Link>
-          <button
-            onClick={() => setShowLogin(true)}
-            title="sign up"
-            className="w-20 h-7 border rounded-lg border-[#F59E0B] text-[#F59E0B] text-center sm:w-24 hover:bg-[#F59E0B] hover:text-white"
-          >
-            sign up
-          </button>
+          {!token ? (
+            <button
+              onClick={() => setShowLogin(true)}
+              title="sign up"
+              className="w-20 h-7 border rounded-lg border-[#F59E0B] text-[#F59E0B] text-center sm:w-24 hover:bg-[#F59E0B] hover:text-white"
+            >
+              sign up
+            </button>
+          ) : (
+            <div className="relative">
+              <img
+                onClick={() => setProfileHandler(!profileHandler)}
+                className="w-9 h-9 object-cover rounded-full cursor-pointer"
+                src={assets.profileIcon}
+              />
+              <ul
+                className={`w-30 h-30 bg-amber-50 flex-col justify-center items-center absolute top-11 -right-5 lg:right-0 xl:-right-5 ${profileHandler ? 'flex' : 'hidden'} shadow-lg`}
+              >
+                <li className="flex w-full h-30 border-b border-b-gray-300 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6 text-[#F59E0B]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+                    />
+                  </svg>
+
+                  <p className="text-sm text-gray-500">Orders</p>
+                </li>
+                <li className="flex w-full h-30 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="size-6 text-[#F59E0B]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+                    />
+                  </svg>
+                  <p className="text-sm text-gray-500">Logout</p>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* ------------ mobile menu button --------- */}

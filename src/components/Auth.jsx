@@ -114,7 +114,7 @@ const Auth = ({ showLogin, setShowLogin }) => {
               placeholder="Password"
               required
             />
-            <button
+            <div
               onClick={() => setShowPassword(!showPassword)}
               className="absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer text-[#5c4d4d]"
             >
@@ -123,7 +123,7 @@ const Auth = ({ showLogin, setShowLogin }) => {
               ) : (
                 <i className="fa-regular fa-eye text-sm"></i>
               )}
-            </button>
+            </div>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ const Auth = ({ showLogin, setShowLogin }) => {
         {/* ---------- auth switch ---------  */}
         {currentState === 'Login' ? (
           <p className="text-xs text-[#5c4d4d] text-center">
-            Create a new account{' '}
+            Create a new account
             <span
               className="underline cursor-pointer"
               onClick={() => setCurrentState('Sign Up')}
@@ -164,7 +164,7 @@ const Auth = ({ showLogin, setShowLogin }) => {
           </p>
         ) : (
           <p className="text-xs text-[#5c4d4d] text-center">
-            Already have an account{' '}
+            Already have an account
             <span
               className="underline cursor-pointer"
               onClick={() => setCurrentState('Login')}
