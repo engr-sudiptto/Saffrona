@@ -1,11 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { StoreContext } from './../context/StoreContext';
+import axios from 'axios';
 
 const Auth = ({ showLogin, setShowLogin }) => {
   const [currentState, setCurrentState] = useState('Sign Up');
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleSubmit = e => {
+
+  const {url, setToken} = useContext(StoreContext)
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password:""
+  })
+
+  const onChangeHndler = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setData(data=>({...data,[name]:value}))
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let newUrl = url;
+
+    if (currentState === "Login") {
+      newUrl += "/api/user/login"
+    } else {
+      newUrl += "/api/user/register"
+    }
+
+    const response = await axios.post(newUrl, data);
+
+    if (response.data.success) {
+      setToken(response.data.token)
+      localStorage.setItem("token", response.data.token)
+      setShowLogin(false)
+    } else {
+      alert('Error')
+    }
+
   };
 
     // stop scrolling when popup is open
@@ -21,7 +56,8 @@ const Auth = ({ showLogin, setShowLogin }) => {
         document.body.style.overflow = 'auto';
       };
     }, [showLogin]);
-
+  
+  
   return (
     <div className="fixed inset-0 z-110 bg-black/50 flex justify-center items-center backdrop-blur-xs">
       {/* ======== main auth popup =========  */}
@@ -49,7 +85,10 @@ const Auth = ({ showLogin, setShowLogin }) => {
           {currentState === 'Login' ? (
             <></>
           ) : (
-            <input
+              <input
+                name='name'
+                value={data.name}
+                onChange={onChangeHndler}
               className="w-full h-11 border border-[#5c4d4d50] rounded-lg px-2 text-sm tracking-wide mt-5 outline-0 text-[#5c4d4d] bg-transparent"
               type="text"
               placeholder="Your Name"
@@ -57,6 +96,9 @@ const Auth = ({ showLogin, setShowLogin }) => {
             ></input>
           )}
           <input
+            name='email'
+            value={data.email}
+            onChange={onChangeHndler}
             className="w-full h-11 border border-[#5c4d4d50] rounded-lg px-2 text-sm tracking-wide mt-3 outline-0 text-[#5c4d4d] bg-transparent"
             type="email"
             placeholder="Your Email"
@@ -64,6 +106,9 @@ const Auth = ({ showLogin, setShowLogin }) => {
           />
           <div className="relative">
             <input
+              name='password'
+              onChange={onChangeHndler}
+              value={data.password}
               className="w-full h-11 border border-[#5c4d4d50] rounded-lg px-2 text-sm tracking-wide mt-3 mb-3 outline-0 text-[#5c4d4d] bg-transparent"
               type={showPassword ? 'text' : 'password'}
               placeholder="Password"
