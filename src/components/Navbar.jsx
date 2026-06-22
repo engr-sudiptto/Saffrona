@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { assets } from '../assets/assets';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../context/StoreContext';
 
 const Navbar = ({ setShowLogin }) => {
@@ -9,6 +9,14 @@ const Navbar = ({ setShowLogin }) => {
   const { getTotalAmount, token, setToken } = useContext(StoreContext);
 
   const [profileHandler, setProfileHandler] = useState(false)
+
+  // logout functionality
+  const navigate = useNavigate()
+  const logout = () => {
+    localStorage.removeItem("token")
+    setToken("")
+    navigate('/')
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -178,7 +186,7 @@ const Navbar = ({ setShowLogin }) => {
 
                   <p className="text-sm text-gray-500">Orders</p>
                 </li>
-                <li className="flex w-full h-30 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
+                <li onClick={logout} className="flex w-full h-30 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
