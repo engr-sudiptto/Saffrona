@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import CrossPopup from '../components/CrossPopup';
 
 const Cart = () => {
-  const { foodList, cartItems, removeFromCart, getTotalAmount } =
+  const { foodList, cartItems, removeFromCart, getTotalAmount, url } =
     useContext(StoreContext);
   const isCartEmpty = !foodList.some(item => cartItems[item._id] > 0);
 
@@ -55,7 +55,7 @@ const Cart = () => {
                   <div className="grid grid-cols-6 items-center p-3 text-xs sm:text-sm">
                     <img
                       className="w-10 h-10 lg:w-15 lg:h-15"
-                      src={item.image}
+                      src={url+"/images/"+item.image}
                       alt=""
                     />
                     <p className="text-gray-400">{item.name}</p>
