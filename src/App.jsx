@@ -13,6 +13,7 @@ import Preloader from './components/Preloader';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Delivery from './pages/Delivery';
 import AboutUs from './pages/AboutUs';
+import Verify from './pages/Verify';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -46,6 +47,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/delivery" element={<Delivery/>} />
           <Route path="/about" element={<AboutUs/>} />
+          <Route path="/verify" element={<Verify/>} />
         </Routes>
       <Footer />
       </Router>
