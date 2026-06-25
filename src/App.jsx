@@ -14,6 +14,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import Delivery from './pages/Delivery';
 import AboutUs from './pages/AboutUs';
 import Verify from './pages/Verify';
+import MyOrders from './pages/MyOrders';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -48,6 +49,7 @@ function App() {
           <Route path="/delivery" element={<Delivery/>} />
           <Route path="/about" element={<AboutUs/>} />
           <Route path="/verify" element={<Verify/>} />
+          <Route path="/myorders" element={<MyOrders/>} />
         </Routes>
       <Footer />
       </Router>
