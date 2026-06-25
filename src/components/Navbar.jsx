@@ -159,16 +159,16 @@ const Navbar = ({ setShowLogin }) => {
               sign up
             </button>
           ) : (
-            <div className="relative">
+            <div className="relative group">
               <img
                 onClick={() => setProfileHandler(!profileHandler)}
                 className="w-9 h-9 object-cover rounded-full cursor-pointer"
                 src={assets.profileIcon}
               />
               <ul
-                className={`w-30 h-30 bg-amber-50 flex-col justify-center items-center absolute top-11 -right-5 lg:right-0 xl:-right-5 ${profileHandler ? 'flex' : 'hidden'} shadow-lg`}
+                className={`w-30 h-30 bg-amber-50 flex-col justify-center items-center absolute top-9 -right-5 lg:right-0 xl:-right-5 ${profileHandler ? 'flex' : 'hidden'} shadow-lg group-hover:flex`}
               >
-                <li className="flex w-full h-30 border-b border-b-gray-300 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
+                <li onClick={()=>navigate('/myorders')} className="flex w-full h-30 border-b border-b-gray-300 justify-center items-center gap-2 hover:bg-amber-100 cursor-pointer">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
