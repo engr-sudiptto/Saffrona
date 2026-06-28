@@ -496,43 +496,60 @@ export const foodList = [
 export const foodMenuDetails = [
   // === SALAD CATEGORY ===
   {
-    _id: '1',
+    _id: '6a39697c7a48bb493f002aa9',
     name: 'Greek Salad',
     image: salad,
     price: 12,
-    description: 'A fresh and healthy classic Greek salad with olives and feta cheese.',
+    description:
+      'A fresh and healthy classic Greek salad with olives and feta cheese.',
     category: 'Salad',
     rating: 4.5,
     details: {
-      ingredients: ['Cucumbers', 'Tomatoes', 'Feta Cheese', 'Kalamata Olives', 'Red Onions', 'Olive Oil', 'Oregano'],
+      ingredients: [
+        'Cucumbers',
+        'Tomatoes',
+        'Feta Cheese',
+        'Kalamata Olives',
+        'Red Onions',
+        'Olive Oil',
+        'Oregano',
+      ],
       calories: '180 kcal',
       prepTime: '10-15 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '2',
+    _id: '6a3969b17a48bb493f002aaa',
     name: 'Chicken Salad',
     image: chicken_salad,
     price: 15,
-    description: 'Grilled chicken breast served over crisp greens and garden vegetables.',
+    description:
+      'Grilled chicken breast served over crisp greens and garden vegetables.',
     category: 'Salad',
     rating: 4.7,
     details: {
-      ingredients: ['Grilled Chicken Breast', 'Romaine Lettuce', 'Cherry Tomatoes', 'Croutons', 'Parmesan', 'Caesar Dressing'],
+      ingredients: [
+        'Grilled Chicken Breast',
+        'Romaine Lettuce',
+        'Cherry Tomatoes',
+        'Croutons',
+        'Parmesan',
+        'Caesar Dressing',
+      ],
       calories: '350 kcal',
       prepTime: '15-20 mins',
       servingSize: '1 Bowl',
       isVeg: false,
       spicyLevel: 'Mild',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '3',
+    _id: '6a3969d47a48bb493f002aab',
     name: 'Garden Salad',
     image: salad2,
     price: 10,
@@ -540,35 +557,48 @@ export const foodMenuDetails = [
     category: 'Salad',
     rating: 4.2,
     details: {
-      ingredients: ['Mixed Greens', 'Sliced Cucumbers', 'Roma Tomatoes', 'Carrots', 'House Vinaigrette'],
+      ingredients: [
+        'Mixed Greens',
+        'Sliced Cucumbers',
+        'Roma Tomatoes',
+        'Carrots',
+        'House Vinaigrette',
+      ],
       calories: '120 kcal',
       prepTime: '10 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '4',
+    _id: '6a3969f77a48bb493f002aac',
     name: 'Caesar Salad',
     image: salad3,
     price: 13,
-    description: 'Traditional Caesar salad with crunchy croutons and parmesan cheese.',
+    description:
+      'Traditional Caesar salad with crunchy croutons and parmesan cheese.',
     category: 'Salad',
     rating: 4.6,
     details: {
-      ingredients: ['Romaine Lettuce', 'Garlic Croutons', 'Parmesan Cheese', 'Classic Caesar Dressing', 'Black Pepper'],
+      ingredients: [
+        'Romaine Lettuce',
+        'Garlic Croutons',
+        'Parmesan Cheese',
+        'Classic Caesar Dressing',
+        'Black Pepper',
+      ],
       calories: '290 kcal',
       prepTime: '12 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '5',
+    _id: '6a396a337a48bb493f002aad',
     name: 'Veggie Salad',
     image: vag_salad,
     price: 11,
@@ -576,19 +606,25 @@ export const foodMenuDetails = [
     category: 'Salad',
     rating: 4.3,
     details: {
-      ingredients: ['Bell Peppers', 'Broccoli', 'Sweet Corn', 'Red Cabbage', 'Lemon-Herb Dressing'],
+      ingredients: [
+        'Bell Peppers',
+        'Broccoli',
+        'Sweet Corn',
+        'Red Cabbage',
+        'Lemon-Herb Dressing',
+      ],
       calories: '140 kcal',
       prepTime: '15 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === ROLL CATEGORY ===
   {
-    _id: '6',
+    _id: '6a396a847a48bb493f002aaf',
     name: 'Spring Roll',
     image: roll,
     price: 8,
@@ -596,73 +632,103 @@ export const foodMenuDetails = [
     category: 'Roll',
     rating: 4.4,
     details: {
-      ingredients: ['Spring Roll Pastry', 'Shredded Cabbage', 'Carrots', 'Glass Noodles', 'Soy Sauce', 'Sesame Oil'],
+      ingredients: [
+        'Spring Roll Pastry',
+        'Shredded Cabbage',
+        'Carrots',
+        'Glass Noodles',
+        'Soy Sauce',
+        'Sesame Oil',
+      ],
       calories: '210 kcal',
       prepTime: '15 mins',
       servingSize: '2 Pieces',
       isVeg: true,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '7',
+    _id: '6a396aab7a48bb493f002ab0',
     name: 'Chicken Roll',
     image: roll2,
     price: 10,
-    description: 'Tender chicken and spices wrapped in a flaky, golden paratha.',
+    description:
+      'Tender chicken and spices wrapped in a flaky, golden paratha.',
     category: 'Roll',
     rating: 4.8,
     details: {
-      ingredients: ['Flaky Paratha Wrap', 'Spiced Shredded Chicken', 'Sliced Onions', 'Green Chilis', 'Mint Chutney'],
+      ingredients: [
+        'Flaky Paratha Wrap',
+        'Spiced Shredded Chicken',
+        'Sliced Onions',
+        'Green Chilis',
+        'Mint Chutney',
+      ],
       calories: '420 kcal',
       prepTime: '15-20 mins',
       servingSize: '1 Roll',
       isVeg: false,
       spicyLevel: 'Medium',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '8',
+    _id: '6a396acb7a48bb493f002ab1',
     name: 'Egg Roll',
     image: roll3,
     price: 9,
-    description: 'Classic street-style egg roll with crunchy onions and sauces.',
+    description:
+      'Classic street-style egg roll with crunchy onions and sauces.',
     category: 'Roll',
     rating: 4.5,
     details: {
-      ingredients: ['Tortilla/Paratha', 'Fried Egg', 'Sliced Onions', 'Cucumber', 'Tomato Ketchup', 'Chili Sauce'],
+      ingredients: [
+        'Tortilla/Paratha',
+        'Fried Egg',
+        'Sliced Onions',
+        'Cucumber',
+        'Tomato Ketchup',
+        'Chili Sauce',
+      ],
       calories: '310 kcal',
       prepTime: '10 mins',
       servingSize: '1 Roll',
       isVeg: false,
       spicyLevel: 'Medium',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '9',
+    _id: '6a396aef7a48bb493f002ab2',
     name: 'Veg Roll',
     image: roll4,
     price: 7,
-    description: 'Healthy and delicious mixed vegetable filling inside a warm wrap.',
+    description:
+      'Healthy and delicious mixed vegetable filling inside a warm wrap.',
     category: 'Roll',
     rating: 4.1,
     details: {
-      ingredients: ['Wheat Wrap', 'Mashed Potatoes', 'Green Peas', 'Carrots', 'Spices', 'Mayo'],
+      ingredients: [
+        'Wheat Wrap',
+        'Mashed Potatoes',
+        'Green Peas',
+        'Carrots',
+        'Spices',
+        'Mayo',
+      ],
       calories: '260 kcal',
       prepTime: '12 mins',
       servingSize: '1 Roll',
       isVeg: true,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === DESSERT CATEGORY ===
   {
-    _id: '10',
+    _id: '6a396b147a48bb493f002ab3',
     name: 'Chocolate Delight',
     image: dessert,
     price: 14,
@@ -670,17 +736,23 @@ export const foodMenuDetails = [
     category: 'Dessert',
     rating: 4.9,
     details: {
-      ingredients: ['Dark Chocolate', 'Heavy Cream', 'Cocoa Powder', 'Sugar', 'Vanilla Extract'],
+      ingredients: [
+        'Dark Chocolate',
+        'Heavy Cream',
+        'Cocoa Powder',
+        'Sugar',
+        'Vanilla Extract',
+      ],
       calories: '450 kcal',
       prepTime: '10 mins',
       servingSize: '1 Cup',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '11',
+    _id: '6a396b347a48bb493f002ab4',
     name: 'Vanilla Pudding',
     image: dessert2,
     price: 12,
@@ -688,35 +760,49 @@ export const foodMenuDetails = [
     category: 'Dessert',
     rating: 4.3,
     details: {
-      ingredients: ['Whole Milk', 'Vanilla Bean Paste', 'Sugar', 'Cornstarch', 'Caramel Drizzle'],
+      ingredients: [
+        'Whole Milk',
+        'Vanilla Bean Paste',
+        'Sugar',
+        'Cornstarch',
+        'Caramel Drizzle',
+      ],
       calories: '280 kcal',
       prepTime: '15 mins',
       servingSize: '1 Serving',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '12',
+    _id: '6a396b4e7a48bb493f002ab5',
     name: 'Fruit Custard',
     image: dessert3,
     price: 13,
-    description: 'A creamy blend of milk, custard powder, and fresh seasonal fruits.',
+    description:
+      'A creamy blend of milk, custard powder, and fresh seasonal fruits.',
     category: 'Dessert',
     rating: 4.6,
     details: {
-      ingredients: ['Milk', 'Custard Powder', 'Apple Cubes', 'Banana', 'Pomegranate Seeds', 'Grapes'],
+      ingredients: [
+        'Milk',
+        'Custard Powder',
+        'Apple Cubes',
+        'Banana',
+        'Pomegranate Seeds',
+        'Grapes',
+      ],
       calories: '220 kcal',
       prepTime: '20 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '13',
+    _id: '6a396b6e7a48bb493f002ab6',
     name: 'Strawberry Mousse',
     image: dessert4,
     price: 15,
@@ -724,73 +810,99 @@ export const foodMenuDetails = [
     category: 'Dessert',
     rating: 4.7,
     details: {
-      ingredients: ['Fresh Strawberry Puree', 'Gelatin', 'Wipped Cream', 'Powdered Sugar'],
+      ingredients: [
+        'Fresh Strawberry Puree',
+        'Gelatin',
+        'Wipped Cream',
+        'Powdered Sugar',
+      ],
       calories: '310 kcal',
       prepTime: '15 mins',
       servingSize: '1 Glass',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '14',
+    _id: '6a396b917a48bb493f002ab7',
     name: 'Sweet Cream Tart',
     image: dessert5,
     price: 16,
-    description: 'A buttery tart shell filled with sweet, velvety pastry cream.',
+    description:
+      'A buttery tart shell filled with sweet, velvety pastry cream.',
     category: 'Dessert',
     rating: 4.5,
     details: {
-      ingredients: ['Flour Crust', 'Butter', 'Egg Yolks', 'Pastry Cream', 'Glazed Berries'],
+      ingredients: [
+        'Flour Crust',
+        'Butter',
+        'Egg Yolks',
+        'Pastry Cream',
+        'Glazed Berries',
+      ],
       calories: '380 kcal',
       prepTime: '25 mins',
       servingSize: '1 Slice',
       isVeg: false,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === SANDWICH CATEGORY ===
   {
-    _id: '15',
+    _id: '6a396bb87a48bb493f002ab8',
     name: 'Club Sandwich',
     image: sandwich,
     price: 12,
-    description: 'Classic double-decker sandwich with layered fillings and fries.',
+    description:
+      'Classic double-decker sandwich with layered fillings and fries.',
     category: 'Sandwich',
     rating: 4.6,
     details: {
-      ingredients: ['White Bread Slices', 'Smoked Turkey/Chicken', 'Toasted Bacon', 'Lettuce', 'Tomato', 'Mayonnaise'],
+      ingredients: [
+        'White Bread Slices',
+        'Smoked Turkey/Chicken',
+        'Toasted Bacon',
+        'Lettuce',
+        'Tomato',
+        'Mayonnaise',
+      ],
       calories: '520 kcal',
       prepTime: '15 mins',
       servingSize: 'Full Sandwich + Fries',
       isVeg: false,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '16',
+    _id: '6a396bd97a48bb493f002ab9',
     name: 'Grilled Cheese Sandwich',
     image: sandwich2,
     price: 9,
-    description: 'Melted premium cheese sandwiched between perfectly toasted bread.',
+    description:
+      'Melted premium cheese sandwiched between perfectly toasted bread.',
     category: 'Sandwich',
     rating: 4.4,
     details: {
-      ingredients: ['Sourdough Bread', 'Cheddar Cheese', 'Mozzarella Cheese', 'Salted Butter'],
+      ingredients: [
+        'Sourdough Bread',
+        'Cheddar Cheese',
+        'Mozzarella Cheese',
+        'Salted Butter',
+      ],
       calories: '410 kcal',
       prepTime: '10 mins',
       servingSize: '1 Piece',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '17',
+    _id: '6a396bfa7a48bb493f002aba',
     name: 'Chicken Sandwich',
     image: sandwich3,
     price: 14,
@@ -798,55 +910,76 @@ export const foodMenuDetails = [
     category: 'Sandwich',
     rating: 4.7,
     details: {
-      ingredients: ['Brioche Bun', 'Pan-Seared Chicken Breast', 'Lettuce', 'Tomato Slices', 'Garlic Mayo'],
+      ingredients: [
+        'Brioche Bun',
+        'Pan-Seared Chicken Breast',
+        'Lettuce',
+        'Tomato Slices',
+        'Garlic Mayo',
+      ],
       calories: '460 kcal',
       prepTime: '15 mins',
       servingSize: '1 Burger Bun Style',
       isVeg: false,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '18',
+    _id: '6a396c1a7a48bb493f002abb',
     name: 'Veggie Sandwich',
     image: sandwich4,
     price: 10,
-    description: 'Loaded with fresh, crunchy veggies and a spread of mint chutney.',
+    description:
+      'Loaded with fresh, crunchy veggies and a spread of mint chutney.',
     category: 'Sandwich',
     rating: 4.2,
     details: {
-      ingredients: ['Brown Bread', 'Cucumber Slices', 'Beetroot', 'Onions', 'Spicy Mint Chutney', 'Sandwich Masala'],
+      ingredients: [
+        'Brown Bread',
+        'Cucumber Slices',
+        'Beetroot',
+        'Onions',
+        'Spicy Mint Chutney',
+        'Sandwich Masala',
+      ],
       calories: '230 kcal',
       prepTime: '10 mins',
       servingSize: '1 Piece',
       isVeg: true,
       spicyLevel: 'Medium',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '19',
+    _id: '6a396c3d7a48bb493f002abc',
     name: 'BBQ Chicken Sandwich',
     image: sandwich5,
     price: 15,
-    description: 'Shredded chicken tossed in smoky BBQ sauce, served in fresh bread.',
+    description:
+      'Shredded chicken tossed in smoky BBQ sauce, served in fresh bread.',
     category: 'Sandwich',
     rating: 4.8,
     details: {
-      ingredients: ['Sub Baguette Bread', 'Pulled Chicken breast', 'Smoky BBQ Sauce', 'Pickled Jalapenos', 'Melted Provolone'],
+      ingredients: [
+        'Sub Baguette Bread',
+        'Pulled Chicken breast',
+        'Smoky BBQ Sauce',
+        'Pickled Jalapenos',
+        'Melted Provolone',
+      ],
       calories: '580 kcal',
       prepTime: '20 mins',
       servingSize: '1 Footlong Sub',
       isVeg: false,
       spicyLevel: 'Medium',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
 
   // === CAKE CATEGORY ===
   {
-    _id: '20',
+    _id: '6a396c5c7a48bb493f002abd',
     name: 'Chocolate Cake',
     image: cake,
     price: 18,
@@ -854,17 +987,23 @@ export const foodMenuDetails = [
     category: 'Cake',
     rating: 4.9,
     details: {
-      ingredients: ['Cocoa Powder', 'Flour', 'Buttermilk', 'Belgian Chocolate Fudge', 'Espresso Powder'],
+      ingredients: [
+        'Cocoa Powder',
+        'Flour',
+        'Buttermilk',
+        'Belgian Chocolate Fudge',
+        'Espresso Powder',
+      ],
       calories: '540 kcal',
       prepTime: '10 mins',
       servingSize: '1 Slice',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '21',
+    _id: '6a396c797a48bb493f002abe',
     name: 'Red Velvet Cake',
     image: cake2,
     price: 20,
@@ -872,55 +1011,73 @@ export const foodMenuDetails = [
     category: 'Cake',
     rating: 4.8,
     details: {
-      ingredients: ['Cocoa', 'Beetroot Extract/Red Color', 'Cream Cheese Frosting', 'Vanilla', 'Butter'],
+      ingredients: [
+        'Cocoa',
+        'Beetroot Extract/Red Color',
+        'Cream Cheese Frosting',
+        'Vanilla',
+        'Butter',
+      ],
       calories: '510 kcal',
       prepTime: '10 mins',
       servingSize: '1 Slice',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '22',
+    _id: '6a396c917a48bb493f002abf',
     name: 'Black Forest Cake',
     image: cake3,
     price: 19,
-    description: 'Traditional German cake with whipped cream, cherries, and chocolate shavings.',
+    description:
+      'Traditional German cake with whipped cream, cherries, and chocolate shavings.',
     category: 'Cake',
     rating: 4.7,
     details: {
-      ingredients: ['Chocolate Sponge Layers', 'Sour Cherries', 'Kirsch/Cherry Syrup', 'Whipped Cream', 'Chocolate Curls'],
+      ingredients: [
+        'Chocolate Sponge Layers',
+        'Sour Cherries',
+        'Kirsch/Cherry Syrup',
+        'Whipped Cream',
+        'Chocolate Curls',
+      ],
       calories: '490 kcal',
       prepTime: '12 mins',
       servingSize: '1 Slice',
       isVeg: false,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '23',
+    _id: '6a396cb47a48bb493f002ac0',
     name: 'Creamy Cupcake',
     image: cup_cake,
     price: 5,
-    description: 'Delightful mini cupcake topped with colorful frosting and sprinkles.',
+    description:
+      'Delightful mini cupcake topped with colorful frosting and sprinkles.',
     category: 'Cake',
     rating: 4.5,
     details: {
-      ingredients: ['Vanilla Sponge', 'Buttercream Frosting', 'Rainbow Sprinkles'],
+      ingredients: [
+        'Vanilla Sponge',
+        'Buttercream Frosting',
+        'Rainbow Sprinkles',
+      ],
       calories: '190 kcal',
       prepTime: '5 mins',
       servingSize: '1 Piece',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === PASTA CATEGORY ===
   {
-    _id: '24',
+    _id: '6a396cda7a48bb493f002ac1',
     name: 'Tomato Pasta',
     image: pasta,
     price: 14,
@@ -928,127 +1085,180 @@ export const foodMenuDetails = [
     category: 'Pasta',
     rating: 4.4,
     details: {
-      ingredients: ['Penne Pasta', 'San Marzano Tomatoes', 'Garlic', 'Fresh Basil', 'Olive Oil', 'Parmesan'],
+      ingredients: [
+        'Penne Pasta',
+        'San Marzano Tomatoes',
+        'Garlic',
+        'Fresh Basil',
+        'Olive Oil',
+        'Parmesan',
+      ],
       calories: '380 kcal',
       prepTime: '15 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '25',
+    _id: '6a396d017a48bb493f002ac2',
     name: 'Arrabbiata Pasta',
     image: pasta2,
     price: 15,
-    description: 'Spicy pasta dish made with garlic, tomatoes, and dried red chili peppers.',
+    description:
+      'Spicy pasta dish made with garlic, tomatoes, and dried red chili peppers.',
     category: 'Pasta',
     rating: 4.5,
     details: {
-      ingredients: ['Penne Pasta', 'Crushed Tomatoes', 'Garlic Flakes', 'Dried Red Chili Peppers', 'Parsley'],
+      ingredients: [
+        'Penne Pasta',
+        'Crushed Tomatoes',
+        'Garlic Flakes',
+        'Dried Red Chili Peppers',
+        'Parsley',
+      ],
       calories: '390 kcal',
       prepTime: '15 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Hot',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '26',
+    _id: '6a396d1f7a48bb493f002ac3',
     name: 'Creamy Mushroom Pasta',
     image: pasta3,
     price: 16,
-    description: 'Perfectly cooked pasta drenched in a rich, velvety mushroom cream sauce.',
+    description:
+      'Perfectly cooked pasta drenched in a rich, velvety mushroom cream sauce.',
     category: 'Pasta',
     rating: 4.8,
     details: {
-      ingredients: ['Fettuccine Pasta', 'Button Mushrooms', 'Heavy Cream', 'Garlic', 'White Wine Reduction', 'Parmesan'],
+      ingredients: [
+        'Fettuccine Pasta',
+        'Button Mushrooms',
+        'Heavy Cream',
+        'Garlic',
+        'White Wine Reduction',
+        'Parmesan',
+      ],
       calories: '590 kcal',
       prepTime: '20 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '27',
+    _id: '6a396d3f7a48bb493f002ac4',
     name: 'Baked Pasta',
     image: pasta4,
     price: 17,
-    description: 'Oven-baked pasta with layers of meat, sauce, and melted mozzarella.',
+    description:
+      'Oven-baked pasta with layers of meat, sauce, and melted mozzarella.',
     category: 'Pasta',
     rating: 4.7,
     details: {
-      ingredients: ['Rigatoni Pasta', 'Minced Beef Sauce', 'Marinara', 'Mozzarella Cheese', 'Ricotta'],
+      ingredients: [
+        'Rigatoni Pasta',
+        'Minced Beef Sauce',
+        'Marinara',
+        'Mozzarella Cheese',
+        'Ricotta',
+      ],
       calories: '670 kcal',
       prepTime: '25 mins',
       servingSize: '1 Baking Dish Bowl',
       isVeg: false,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '28',
+    _id: '6a396d5b7a48bb493f002ac5',
     name: 'Pesto Pasta',
     image: pasta5,
     price: 16,
-    description: 'Pasta coated in a fresh basil pesto sauce, garlic, and pine nuts.',
+    description:
+      'Pasta coated in a fresh basil pesto sauce, garlic, and pine nuts.',
     category: 'Pasta',
     rating: 4.6,
     details: {
-      ingredients: ['Spaghetti', 'Fresh Basil Leaves', 'Pine Nuts', 'Garlic', 'Extra Virgin Olive Oil', 'Pecorino Romano'],
+      ingredients: [
+        'Spaghetti',
+        'Fresh Basil Leaves',
+        'Pine Nuts',
+        'Garlic',
+        'Extra Virgin Olive Oil',
+        'Pecorino Romano',
+      ],
       calories: '460 kcal',
       prepTime: '15 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '29',
+    _id: '6a396d817a48bb493f002ac6',
     name: 'White Sauce Pasta',
     image: white_pasta,
     price: 15,
-    description: 'Deliciously creamy pasta prepared in a rich Alfredo white sauce.',
+    description:
+      'Deliciously creamy pasta prepared in a rich Alfredo white sauce.',
     category: 'Pasta',
     rating: 4.7,
     details: {
-      ingredients: ['Penne Pasta', 'Butter', 'Heavy Whipping Cream', 'Garlic Paste', 'Black Pepper', 'Parmesan'],
+      ingredients: [
+        'Penne Pasta',
+        'Butter',
+        'Heavy Whipping Cream',
+        'Garlic Paste',
+        'Black Pepper',
+        'Parmesan',
+      ],
       calories: '540 kcal',
       prepTime: '15-18 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Non-Spicy',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === NOODLE CATEGORY ===
   {
-    _id: '30',
+    _id: '6a396d9d7a48bb493f002ac7',
     name: 'Chow Mein Noodles',
     image: noodle,
     price: 12,
-    description: 'Stir-fried noodles with crisp vegetables and traditional Asian sauces.',
+    description:
+      'Stir-fried noodles with crisp vegetables and traditional Asian sauces.',
     category: 'Noodle',
     rating: 4.4,
     details: {
-      ingredients: ['Egg Noodles', 'Shredded Cabbage', 'Bell Peppers', 'Dark Soy Sauce', 'Oyster Sauce', 'Garlic'],
+      ingredients: [
+        'Egg Noodles',
+        'Shredded Cabbage',
+        'Bell Peppers',
+        'Dark Soy Sauce',
+        'Oyster Sauce',
+        'Garlic',
+      ],
       calories: '410 kcal',
       prepTime: '15 mins',
       servingSize: '1 Plate',
       isVeg: false,
       spicyLevel: 'Mild',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '31',
+    _id: '6a396dbb7a48bb493f002ac8',
     name: 'Spicy Ramen',
     image: noodle2,
     price: 14,
@@ -1056,105 +1266,152 @@ export const foodMenuDetails = [
     category: 'Noodle',
     rating: 4.8,
     details: {
-      ingredients: ['Ramen Noodles', 'Spicy Gochujang Broth', 'Soft Boiled Egg', 'Nori Sheet', 'Chili Oil', 'Scallions'],
+      ingredients: [
+        'Ramen Noodles',
+        'Spicy Gochujang Broth',
+        'Soft Boiled Egg',
+        'Nori Sheet',
+        'Chili Oil',
+        'Scallions',
+      ],
       calories: '520 kcal',
       prepTime: '20 mins',
       servingSize: '1 Large Soup Bowl',
       isVeg: false,
       spicyLevel: 'Hot',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '32',
+    _id: '6a396dd47a48bb493f002ac9',
     name: 'Hakka Noodles',
     image: noodle3,
     price: 13,
-    description: 'Indo-Chinese style stir-fried noodles cooked on a high flame.',
+    description:
+      'Indo-Chinese style stir-fried noodles cooked on a high flame.',
     category: 'Noodle',
     rating: 4.5,
     details: {
-      ingredients: ['Wheat Noodles', 'French Beans', 'Carrots', 'Capsicum', 'White Pepper', 'Vinegar', 'Szechuan Sauce'],
+      ingredients: [
+        'Wheat Noodles',
+        'French Beans',
+        'Carrots',
+        'Capsicum',
+        'White Pepper',
+        'Vinegar',
+        'Szechuan Sauce',
+      ],
       calories: '380 kcal',
       prepTime: '12 mins',
       servingSize: '1 Plate',
       isVeg: true,
       spicyLevel: 'Medium',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
 
   // === PURE VEG CATEGORY ===
   {
-    _id: '33',
+    _id: '6a396dee7a48bb493f002aca',
     name: 'Veg Platter',
     image: pure_vage,
     price: 16,
-    description: 'A wholesome combination of pure vegetarian dishes and flatbread.',
+    description:
+      'A wholesome combination of pure vegetarian dishes and flatbread.',
     category: 'Pure Veg',
     rating: 4.6,
     details: {
-      ingredients: ['Jeera Rice', 'Butter Roti', 'Mix Veg Sabzi', 'Dal Fry', 'Salad', 'Gulab Jamun'],
+      ingredients: [
+        'Jeera Rice',
+        'Butter Roti',
+        'Mix Veg Sabzi',
+        'Dal Fry',
+        'Salad',
+        'Gulab Jamun',
+      ],
       calories: '720 kcal',
       prepTime: '25-30 mins',
       servingSize: '1 Thali (Platter)',
       isVeg: true,
       spicyLevel: 'Medium',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '34',
+    _id: '6a396e087a48bb493f002acb',
     name: 'Paneer Tikka Curry',
     image: pure_vage2,
     price: 15,
-    description: 'Grilled paneer cubes cooked in a rich, aromatic tomato gravy.',
+    description:
+      'Grilled paneer cubes cooked in a rich, aromatic tomato gravy.',
     category: 'Pure Veg',
     rating: 4.8,
     details: {
-      ingredients: ['Cottage Cheese (Paneer)', 'Yogurt Marination', 'Tandoori Masala', 'Cashew Paste', 'Tomato Puree', 'Kasturi Methi'],
+      ingredients: [
+        'Cottage Cheese (Paneer)',
+        'Yogurt Marination',
+        'Tandoori Masala',
+        'Cashew Paste',
+        'Tomato Puree',
+        'Kasturi Methi',
+      ],
       calories: '480 kcal',
       prepTime: '20 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Medium',
-      chefSpecial: true
-    }
+      chefSpecial: true,
+    },
   },
   {
-    _id: '35',
+    _id: '6a396e277a48bb493f002acc',
     name: 'Mix Veg Curry',
     image: pure_vage3,
     price: 12,
-    description: 'A vibrant medley of seasonal vegetables cooked with Indian spices.',
+    description:
+      'A vibrant medley of seasonal vegetables cooked with Indian spices.',
     category: 'Pure Veg',
     rating: 4.3,
     details: {
-      ingredients: ['Cauliflower', 'Green Peas', 'Carrots', 'Beans', 'Onion-Tomato Gravy', 'Garam Masala'],
+      ingredients: [
+        'Cauliflower',
+        'Green Peas',
+        'Carrots',
+        'Beans',
+        'Onion-Tomato Gravy',
+        'Garam Masala',
+      ],
       calories: '310 kcal',
       prepTime: '20 mins',
       servingSize: '1 Bowl',
       isVeg: true,
       spicyLevel: 'Medium',
-      chefSpecial: false
-    }
+      chefSpecial: false,
+    },
   },
   {
-    _id: '36',
+    _id: '6a396e467a48bb493f002acd',
     name: 'Dal Makhani Platter',
     image: pure_vage4,
     price: 14,
-    description: 'Slow-cooked black lentils in a creamy, buttery gravy served fresh.',
+    description:
+      'Slow-cooked black lentils in a creamy, buttery gravy served fresh.',
     category: 'Pure Veg',
     rating: 4.7,
     details: {
-      ingredients: ['Black Lentils (Urad Dal)', 'Kidney Beans (Rajma)', 'Amul Butter', 'Fresh Cream', 'Kashmiri Chili'],
+      ingredients: [
+        'Black Lentils (Urad Dal)',
+        'Kidney Beans (Rajma)',
+        'Amul Butter',
+        'Fresh Cream',
+        'Kashmiri Chili',
+      ],
       calories: '550 kcal',
       prepTime: '25 mins',
       servingSize: 'Dal Bowl with 2 Laccha Paratha',
       isVeg: true,
       spicyLevel: 'Mild',
-      chefSpecial: true
-    }
-  }
+      chefSpecial: true,
+    },
+  },
 ];

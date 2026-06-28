@@ -51,11 +51,11 @@ const Cart = () => {
           foodList.map((item, index) => {
             if (cartItems[item._id] > 0) {
               return (
-                <div>
+                <div key={item._id || index}>
                   <div className="grid grid-cols-6 items-center p-3 text-xs sm:text-sm">
                     <img
                       className="w-10 h-10 lg:w-15 lg:h-15"
-                      src={url+"/images/"+item.image}
+                      src={url + '/images/' + item.image}
                       alt=""
                     />
                     <p className="text-gray-400">{item.name}</p>
@@ -68,7 +68,7 @@ const Cart = () => {
                       onClick={() => removeFromCart(item._id)}
                       className="text-gray-400 cursor-pointer text-[10px] text-center"
                     >
-                      <i class="fa-solid fa-x"></i>
+                      <i className="fa-solid fa-x"></i>
                     </p>
                   </div>
                   <div className="w-full h-px bg-gray-300"></div>
