@@ -101,9 +101,12 @@ const ContactUs = () => {
                     <label className="text-sm text-gray-600">
                       Number of Guests
                     </label>
-                    <select className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]">
+                    <select
+                      defaultValue="2 People"
+                      className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+                    >
                       <option>1 Person</option>
-                      <option selected>2 People</option>
+                      <option>2 People</option>
                       <option>4 People</option>
                       <option>6 People</option>
                       <option>10+ People</option>
@@ -113,8 +116,11 @@ const ContactUs = () => {
                     <label className="text-sm text-gray-600">
                       Special Occasion (Optional)
                     </label>
-                    <select className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]">
-                      <option selected>None</option>
+                    <select
+                      defaultValue="None"
+                      className="mb-5 mt-2 w-full h-10 border rounded-lg border-[#F59E0B] outline-0 px-3 text-gray-500 text-[15px]"
+                    >
+                      <option>None</option>
                       <option>Birthday</option>
                       <option>Anniversary</option>
                       <option>Business Meeting</option>

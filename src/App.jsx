@@ -41,7 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/mobileapp" element={<MobileApp />} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
